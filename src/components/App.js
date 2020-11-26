@@ -11,7 +11,7 @@ const App = () => {
       console.log(val);
       if (!val || val.length === 0) setTime(0);
       if (!isNaN(val)) setTime(parseInt(val, 10));
-      // else setTime(0);
+      else setTime(0);
     }
   }
   const timer = () => setTime(time - 1);
