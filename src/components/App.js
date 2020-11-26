@@ -8,7 +8,10 @@ const App = () => {
   function handleKeyDown(event) {
     if (event.keyCode === 13) {
       const val = event.target.value;
+      console.log(val);
+      if (!val && val.length === 0) return;
       if (!isNaN(val)) setTime(parseInt(val, 10));
+      else setTime(0);
     }
   }
   const timer = () => setTime(time - 1);
