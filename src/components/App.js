@@ -6,10 +6,10 @@ const App = () => {
   const [time, setTime] = useState(0);
 
   function handleKeyDown(event) {
+    const val = event.target.value;
     if (event.keyCode === 13) {
-      const val = event.target.value;
-      // console.log(val);
-      if (!val && val.length === 0) return;
+      console.log(val);
+      if (!val || val.length === 0) setTime(0);
       if (!isNaN(val)) setTime(parseInt(val, 10));
       // else setTime(0);
     }
